@@ -1,0 +1,96 @@
+.footer{
+  $break1: 1150px;
+  $break2: 1000px;
+  position: relative;
+  z-index: 2;
+
+  .row{
+    display: flex;
+    justify-content: center;
+
+    &.contractAddress{
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing5);
+      align-items: center;
+      margin-bottom: var(--spacing8);
+
+
+      .contractAddressText{
+        @media (max-width: 500px){
+          font-size: var(--fontSize0);
+        }
+      }
+    }
+
+    &.socials{
+      justify-content: center;
+      @media (max-width: 1200px){
+        flex-direction: column;
+        gap: var(--spacing6);
+        align-items: center;
+      }
+
+      .social{
+        --color: var(--cream);
+        display: flex;
+        gap: var(--spacing3);
+        align-items: center;
+
+        color: var(--color);
+        text-decoration: none;
+
+        transition: color var(--speed1) ease-in-out;
+
+        svg{
+          max-width: 1em;
+          height: 1em;
+
+          path{
+            transition: fill var(--speed1) ease-in-out;
+
+            fill: var(--color);
+          }
+        }
+
+        &:hover{
+          --color: var(--primaryColor);
+        }
+      }
+    }
+  }
+
+
+  .separator{
+    width: 100%;
+    height: 1px;
+    margin: var(--spacing7) 0;
+
+    background-color: var(--gray);
+  }
+
+  .bottom{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing4);
+    align-items: center;
+
+    color: var(--cream);
+    font-size: var(--fontSize1);
+    font-style: italic;
+    text-align: center;
+
+    opacity: 0.25;
+
+    a{
+      color: var(--cream);
+      text-decoration: none;
+
+      transition: color var(--speed1) ease-in-out, text-decoration var(--speed1) ease-in-out;
+
+      &:hover{
+        color: var(--cream);
+      }
+    }
+  }
+}

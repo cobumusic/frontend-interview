@@ -1,0 +1,50 @@
+.notFound{
+  $break1: 700px;
+  position: relative;
+
+  .background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+    width: 100vw;
+    min-width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+
+    opacity: 0.025;
+
+    user-select: none;
+    pointer-events: none;
+  }
+
+  > div{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing5);
+    justify-content: center;
+    max-width: 550px;
+    min-height: 80vh;
+
+    h1{
+      //we're faking our letter-spacing with spans and flex gap because the letter-spacing rule adds a space after the last letter too
+      display: flex;
+      gap: 0.38em;
+      justify-content: center;
+      margin: 0;
+
+      font-size: var(--fontSize8);
+      line-height: 1em;
+
+      text-align: center;
+      @media (max-width: $break1){font-size: var(--fontSize7);}
+    }
+
+    .subheadline{
+      font-size: var(--fontSize3);
+      text-align: center;
+      @media (max-width: $break1){font-size: var(--fontSize2);}
+    }
+  }
+}

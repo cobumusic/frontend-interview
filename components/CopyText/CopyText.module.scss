@@ -1,0 +1,58 @@
+.copyText{
+  position: relative;
+
+
+  padding: var(--spacing4) var(--spacing5);
+
+  background-color: var(--elevationMaterial8);
+  border-radius: var(--curve);
+  cursor: pointer;
+
+  svg{
+    width: 1.618em;
+    height: auto;
+    path{
+      fill: var(--text);
+    }
+  }
+
+  .originalText,
+  .feedbackText{
+    display: block;
+
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .originalText{
+    display: flex;
+    gap: var(--spacing3);
+    align-items: center;
+
+    opacity: 1;
+  }
+
+  .feedbackText{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 100%;
+
+    white-space: nowrap;
+    text-align: center;
+
+    transform: translate(-50%, -50%);
+    opacity: 0;
+
+    &.visible{
+      opacity: 1;
+      & + .originalText{
+        opacity: 0;
+      }
+    }
+  }
+
+  &:hover{
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,131 @@
+h1{
+  margin: var(--spacing7) 0 var(--spacing6) 0;
+
+  font-weight: 500;
+  font-size: var(--fontSize7);
+  font-family: var(--secondaryFont);
+  line-height: 1.3em;
+
+  text-transform: uppercase;
+  @media (max-width: 1200px){
+    font-size: var(--fontSize6);
+  }
+  @media (max-width: 600px){
+    margin: var(--spacing7) 0 var(--spacing6) 0;
+
+    font-size: var(--fontSize4);
+  }
+
+  &:first-child{
+    margin-top: 0;
+  }
+}
+
+h2{
+  position: relative;
+
+  margin: var(--spacing8) 0 var(--spacing7) 0;
+
+  font-weight: 500;
+
+  font-size: var(--fontSize3);
+  font-family: var(--secondaryFont);
+  line-height: 1.3em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+  @media (max-width: 1200px){
+    font-size: var(--fontSize3);
+  }
+  @media (max-width: 600px){
+    margin: var(--spacing8) 0 var(--spacing5) 0;
+
+    font-size: var(--fontSize3);
+    text-align: center;
+  }
+
+  &:first-child{
+    margin-top: 0;
+  }
+}
+
+h3{
+  margin: var(--spacing6) 0 var(--spacing5) 0;
+
+  font-weight: 500;
+
+  font-size: var(--fontSize3);
+  font-family: var(--secondaryFont);
+  line-height: 1.3em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  @media (max-width: 800px){
+    margin: var(--spacing6) 0 var(--spacing6) 0;
+
+    font-size: var(--fontSize3);
+  }
+}
+
+h4{
+  margin: var(--spacing5) 0 var(--spacing5) 0;
+
+  font-weight: 500;
+
+  font-size: var(--fontSize2);
+  font-family: var(--secondaryFont);
+  line-height: 1.3em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+h5{
+  margin: var(--spacing5) 0 var(--spacing5) 0;
+
+  font-weight: 500;
+
+  font-size: var(--fontSize2);
+  font-family: var(--secondaryFont);
+  line-height: 1.3em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+h6{
+  margin: var(--spacing5) 0 var(--spacing5) 0;
+
+  font-weight: 500;
+
+  font-size: var(--fontSize2);
+  line-height: 1.3em;
+  text-transform: uppercase;
+
+
+  &:first-child{
+    margin-top: 0;
+  }
+}
+
+
+h1,
+h2,
+h3,
+h4{
+  a:not(.custom){
+    text-decoration: none;
+
+    &:hover{
+      color: initial;
+
+      background-color: transparent;
+    }
+  }
+}
+
+
+.heading{
+  font-weight: 500;
+  font-family: var(--secondaryFont);
+  line-height: 1.3em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}

@@ -1,0 +1,126 @@
+.banner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100vw;
+  padding: var(--spacing6);
+
+  color: var(--black);
+  white-space: wrap;
+  text-align: center;
+
+
+  background-color: var(--primaryColor);
+}
+
+section.aboveTheFold{
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+
+  > div{
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    .animation{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+    }
+
+    h1{
+      margin-bottom: var(--spacing6);
+
+      font-size: var(--fontSize9);
+      line-height: 1em;
+      @media (max-width: 800px){font-size: var(--fontSize8);}
+      @media (max-width: 500px){font-size: var(--fontSize7);}
+    }
+
+    .subheadline{
+      margin-bottom: var(--spacing6);
+
+      font-size: var(--fontSize5);
+      line-height: var(--lineHeight);
+      @media (max-width: 1300px){font-size: var(--fontSize4);}
+      @media (max-width: 1100px){font-size: var(--fontSize3);}
+    }
+
+    .subsubheadline{
+      margin-bottom: var(--spacing3);
+
+      font-size: var(--fontSize3);
+      line-height: var(--lineHeight);
+    }
+
+    .contractAddress{
+      @media (max-width: 500px){
+        font-size: var(--fontSize0);
+      }
+    }
+
+    .buttons{
+      display: flex;
+      gap: var(--spacing6);
+      margin-top: var(--spacing7);
+      @media (max-width: 650px){
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.future{
+  .cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing6);
+    @media (max-width: 1200px){
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+
+.lumina{
+  z-index: 2;
+  div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .cta{
+      margin-top: var(--spacing7);
+    }
+  }
+}
+
+
+.framework{
+  z-index: 2;
+  div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    svg{
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

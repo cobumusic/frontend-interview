@@ -1,0 +1,7 @@
+//Only show these elements on devices with only touch input
+.touchOnly{
+  display: none !important; /*stylelint-disable-line declaration-no-important*/
+  @media (pointer: coarse) and (hover: none){
+    display: initial !important; /*stylelint-disable-line declaration-no-important*/
+  }
+}

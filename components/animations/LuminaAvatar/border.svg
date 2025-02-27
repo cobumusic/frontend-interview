@@ -1,0 +1,10 @@
+<svg version="1.1" viewBox="0 0 128 128" height="128" width="128" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(-295.96 229.86)" opacity="1" fill="none" fill-opacity="1" stroke="#ffc700" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1000" stroke-dasharray="none" stroke-opacity="1" paint-order="stroke markers fill">
+    <circle stroke="ffc700" cx="359.961" cy="-165.86" r="64" stroke-width="1" />
+    <circle stroke="ffc700" cx="359.961" cy="-165.86" r="63.5" stroke-width=".992" />
+    <circle stroke="ffc700" cx="359.961" cy="-165.86" r="63" stroke-width=".984" />
+    <circle stroke="ffc700" cx="359.961" cy="-165.86" r="62.5" stroke-width=".977" />
+    <circle stroke="ffc700" cx="359.961" cy="-165.86" r="62" stroke-width=".969" />
+    <circle stroke="ffc700" cx="359.961" cy="-165.86" r="61.5" stroke-width=".961" />
+  </g>
+</svg>

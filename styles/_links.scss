@@ -1,0 +1,13 @@
+a:not(.custom){
+  color: var(--primaryColor);
+  font-weight: 600;
+  text-decoration: underline;
+
+  transition: color var(--speed1) ease-in-out, background-color var(--speed1) ease-in-out;
+
+  &:hover{
+    color: var(--black);
+
+    background-color: var(--primaryColor);
+  }
+}
