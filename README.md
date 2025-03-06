@@ -13,7 +13,7 @@ The site is currently very slow on low-end devices such as phones. For this inte
 ## Getting Started
 Prerequisites: Node 20+
 
-1. Clone the repo: `git clone  https://github.com/Symby-Labs/frontend-interview.git`
+1. Fork the repo and clone it
 2. cd `frontend-interview`
 3. Create a git branch with your name 
 4. `npm install`
