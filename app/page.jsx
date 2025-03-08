@@ -1,6 +1,8 @@
 "use client";
 import moment from "moment";
 import Link from "next/link";
+import Image from "next/image";
+import dynamic from "next/dynamic";
 import {useState, useEffect, useRef} from "react";
 import Button from "@/components/Button/Button";
 import Card from "@/components/Card/Card";
@@ -19,54 +21,56 @@ import TwitterSvg from "@/public/icons/twitter.svg";
 import css from "./page.module.scss";
 
 export default function Page() {
-  //calculate date according to the specification
-  const [formattedDate, setFormattedDate] = useState();
-  useEffect(() => {
-    const dates = [];
-    for (let i = 0; i < 100000; i++) {
-      dates.push(moment().subtract(i, "days"));
-    }
 
-    const result = dates.reduce((acc, date) => {
-      const dayOfYear = date.dayOfYear();
-      const weekOfYear = date.week();
-      const isLeapYear = date.isLeapYear();
+  // commenting this out, as formattedDate is not used anywhere, and this block is expensive
+  // //calculate date according to the specification
+  // const [formattedDate, setFormattedDate] = useState();
+  // useEffect(() => {
+  //   const dates = [];
+  //   for (let i = 0; i < 100000; i++) {
+  //     dates.push(moment().subtract(i, "days"));
+  //   }
 
-      return acc + dayOfYear + weekOfYear + (isLeapYear ? 1 : 0);
-    }, 0);
+  //   const result = dates.reduce((acc, date) => {
+  //     const dayOfYear = date.dayOfYear();
+  //     const weekOfYear = date.week();
+  //     const isLeapYear = date.isLeapYear();
 
-    setFormattedDate(result);
-  }, [setFormattedDate]);
+  //     return acc + dayOfYear + weekOfYear + (isLeapYear ? 1 : 0);
+  //   }, 0);
+
+  //   setFormattedDate(result);
+  // }, [setFormattedDate]);
 
 
-  //Load banner
-  const [dynamicContent, setDynamicContent] = useState([]);
-  const [bannerVisible, setBannerVisible] = useState(false);
-  const contentRef = useRef(null);
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setDynamicContent(<>
-        <div>IMPORTANT ANNOUNCEMENT: Nexus Framework Update Coming Soon! Join our webinar on advanced cognitive architectures next week: new research paper published in partnership with DeepSeek.</div>
-      </>);
+  // //Load banner
+  // const [dynamicContent, setDynamicContent] = useState([]);
+  // const [bannerVisible, setBannerVisible] = useState(false);
+  // const contentRef = useRef(null);
+  // useEffect(() => {
+  //   const timeoutId = setTimeout(() => {
+  //     setDynamicContent(<>
+  //       <div>IMPORTANT ANNOUNCEMENT: Nexus Framework Update Coming Soon! Join our webinar on advanced cognitive architectures next week: new research paper published in partnership with DeepSeek.</div>
+  //     </>);
 
-      //Show banner after delay
-      setTimeout(() => {
-        setBannerVisible(true);
-      }, 150);
-    }, 200);
+  //     //Show banner after delay
+  //     setTimeout(() => {
+  //       setBannerVisible(true);
+  //     }, 0);
+  //   }, 0);
 
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, []);
+  //   return () => {
+  //     clearTimeout(timeoutId);
+  //   };
+  // }, []);
 
 
   return <>
-    {bannerVisible && <div className={css.banner} ref={contentRef}>
+    {/* {bannerVisible && <div className={css.banner} ref={contentRef}>
       {dynamicContent}
-    </div>}
+    </div>} */}
+    <div className={css.banner}>IMPORTANT ANNOUNCEMENT: Nexus Framework Update Coming Soon! Join our webinar on advanced cognitive architectures next week: new research paper published in partnership with DeepSeek.</div>
 
-    {/*Main above the fold section*/}
     <section className={`section ${css.aboveTheFold}`}>
       <div className="sectionInner">
         <h1>NEXUS</h1>
@@ -130,10 +134,10 @@ export default function Page() {
 
         <SlideUpFadeIn>
           <h5 className="initialInvis">2. Intuitive Generation</h5>
-          <p className="initialInvis">Memories from both repositories are integrated with the current conversation context. This consolidated prompt drives a foundation model to produce three distinct <a href="/" target="_blank">conceptual streams</a>. This process mirrors the initial ideation phase in human creative thinking.</p>
+          <p className="initialInvis">Memories from both repositories are integrated with the current conversation context. This consolidated prompt drives a foundation model to produce three distinct <Link href="/" target="_blank">conceptual streams</Link>. This process mirrors the initial ideation phase in human creative thinking.</p>
 
           <h5 className="initialInvis">3. Analytical Refinement</h5>
-          <p className="initialInvis">The refinement process works iteratively, similar to human <a href="/" target="_blank">editorial thinking</a>. We combine retrieved memories, conversation context, and initial conceptual outputs, then process this through an instruction-tuned model. This initiates a systematic refinement cycle.</p>
+          <p className="initialInvis">The refinement process works iteratively, similar to human <Link href="/" target="_blank">editorial thinking</Link>. We combine retrieved memories, conversation context, and initial conceptual outputs, then process this through an instruction-tuned model. This initiates a systematic refinement cycle.</p>
 
           <p className="initialInvis">During each cycle, the model can execute various action types. Currently, Nexus supports two primary actions at this stage:</p>
         </SlideUpFadeIn>

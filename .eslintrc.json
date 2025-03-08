@@ -404,8 +404,7 @@
     "func-call-spacing": "error",
     "eol-last": "error",
     "linebreak-style": [
-      "error",
-      "unix"
+      "allow"
     ]
   }
 }

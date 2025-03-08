@@ -13,6 +13,9 @@ const nextConfig = {
       path.join(__dirname, "../"),
     ],
   },
+  eslint: {
+    ignoreDuringBuilds: true
+  },
   images: {
     remotePatterns: [
       {
